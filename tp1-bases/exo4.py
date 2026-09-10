@@ -1,3 +1,5 @@
+# approximation de pi
+
 n = int(input("entrer le nombre d'approximation de pi souhaitées : "))
 
 def npi(a) :

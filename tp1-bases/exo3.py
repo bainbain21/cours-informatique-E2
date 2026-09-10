@@ -1,3 +1,5 @@
+# conversion d'années humaines en années cannines
+
 while True :
     age = int(input("entrer l'âge à convertir : "))
     if age < 0 :
