@@ -3,16 +3,20 @@
 import random
 from random import randrange
 
-lettre = ["A","B","C","D","E","F","G","H","J","K","L","M","N","P","Q","R","S","T","V","W","X","Y","Z"]
+def matricul() :
 
-A = random.choice(lettre)
-B = random.choice(lettre)
-C = random.choice(lettre)
+    lettre = ["A","B","C","D","E","F","G","H","J","K","L","M","N","P","Q","R","S","T","V","W","X","Y","Z"]
 
-I = randrange(10)
-II = randrange(10)
-III = randrange(10)
+    A,B,C = random.choices(lettre, k=3)
+    if A == "S" or C == "S" and B == "S" :
+        B = random.choices(lettre)
 
-D = random.choice(lettre)
-E = random.choice(lettre)
-F = random.choice(lettre)
+    I,II,III = randrange(10),randrange(10),randrange(10)
+
+    D,E,F = random.choices(lettre, k=3)
+    if D == "S" or F == "S" and E == "S" :
+        E = random.choices(lettre)
+
+    return f"{A}{B}{C}-{I}{II}{III}-{D}{E}{F}"
+
+print(matricul())
