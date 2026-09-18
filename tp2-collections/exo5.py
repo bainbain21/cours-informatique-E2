@@ -33,4 +33,4 @@ def destruction(poly):
 
 # print(destruction(imp(polynome())))
 
-def addition(p1,p2):
+# def addition(p1,p2):
