@@ -8,11 +8,18 @@ if lignes < 0 : print("ValueError, entrer une valuer positive")
 loc = sys.argv[3]
 
 try :
-    with open(loc, 'r', encoding='utf-8') as f :
-        for i in range(lignes):
-            l = f.readline()
-            if l == None:
-                break 
-            print(l)
-except :
+    if ht.lower() == 'head':
+        with open(loc, 'r', encoding='utf-8') as f :
+            for _ in range(lignes):
+                l = f.readline()
+                if l == None:
+                    break 
+                print(l)
+    elif ht.lower() == 'tail' :
+        with open(loc, 'r', encoding='utf-8') as f :
+            l = f.readlines()
+            for l in l[- lignes:] :
+                if l == None : break
+                print(l)
+except FileNotFoundError :
     print('fichier introuvable')
